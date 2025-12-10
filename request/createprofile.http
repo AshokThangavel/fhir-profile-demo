@@ -1,0 +1,42 @@
+POST /csp/healthshare/fhirprofile/fhir/r4/StructureDefinition HTTP/1.1
+Host: localhost:52773
+Content-Type: application/fhir+json
+Authorization: Basic X1NZU1RFTTpTWVMx
+Content-Length: 940
+Accept: application/fhir+json
+
+{
+  "resourceType": "StructureDefinition",
+  "id": "minimal-patient-profile",
+  "url": "http://example.org/fhir/StructureDefinition/minimal-patient-profile",
+  "name": "MinimalPatientProfile",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "min": 1,
+        "short": "MUST have a patient identifier (e.g., MRN)"
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1,
+        "short": "MUST have at least one name"
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "min": 1,
+        "short": "MUST have a gender"
+      }
+    ]
+  }
+}

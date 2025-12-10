@@ -1,0 +1,5 @@
+GET /csp/healthshare/fhirprofile/fhir/r4/StructureDefinition HTTP/1.1
+Host: localhost:52773
+Authorization: Basic X1NZU1RFTTpTWVMx
+Content-Type: application/fhir+json
+Accept: application/fhir+json

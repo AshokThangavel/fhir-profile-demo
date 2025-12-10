@@ -1,0 +1,64 @@
+POST /baseR4/Patient/$validate?profile=https://example.org/fhir/StructureDefinition/AKToturialPatient1 HTTP/1.1
+Host: hapi.fhir.org
+Content-Type: application/fhir+json
+
+{
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "https://example.org/fhir/StructureDefinition/AKToturialPatient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient record</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/fhir/mrn-system",
+      "value": "A12345"
+    }
+  ],
+  "name": [
+    {
+      "family": "Doe",
+      "given": ["John"]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1985-03-21"
+}
+
+###
+
+POST /baseR4/Patient/$validate HTTP/1.1
+Host: hapi.fhir.org
+Content-Type: application/fhir+json
+
+{
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "https://example.org/fhir/StructureDefinition/AKToturialPatient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient record</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/fhir/mrn-system",
+      "value": "A12345"
+    }
+  ],
+  "name": [
+    {
+      "family": "Doe",
+      "given": ["John"]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1985-03-21"
+}
+
