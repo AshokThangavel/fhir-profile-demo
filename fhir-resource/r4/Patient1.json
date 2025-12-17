@@ -1,0 +1,41 @@
+{
+	"resourceType": "Patient",
+	"meta": {
+		"profile": [
+			"http://example.org/fhir/StructureDefinition/FinalPatient"
+		]
+	},
+	"id": "SimpleExample-99",
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Robert Smith, MRN: 99912345, Male, DOB: 1975-08-20.</div>"
+	},
+	"active": true,
+	"identifier": [
+		{
+			"use": "usual",
+			"type": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+						"code": "MR",
+						"display": "Medical Record Number"
+					}
+				]
+			},
+			"system": "http://hospital.example.org/patients",
+			"value": "99912345"
+		}
+	],
+	"name": [
+		{
+			"use": "official",
+			"family": "Smith",
+			"given": [
+				"Robert"
+			]
+		}
+	],
+	"gender": "male",
+	"birthDate": "1975-08-20"
+}

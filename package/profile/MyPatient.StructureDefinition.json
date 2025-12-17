@@ -1,0 +1,37 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/ToturialPatient",
+  "name": "ToturialPatient",
+  "status": "draft",
+  "version": "1.0.1",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "min": 1
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "min": 1
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "min": 1
+      }
+    ]
+  }
+}

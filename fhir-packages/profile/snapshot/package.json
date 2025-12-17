@@ -1,0 +1,8 @@
+{
+  "name": "finalpatient.profile",
+  "version": "1.0.0",
+  "description": "Example finalpatient snapshot profile validation package",
+  "dependencies": {
+    "hl7.fhir.r4.core":"4.0.1"
+  }
+}

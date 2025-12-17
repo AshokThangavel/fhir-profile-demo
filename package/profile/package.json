@@ -1,0 +1,8 @@
+{
+  "name": "tutorialpatient.profile",
+  "version": "1.0.0",
+  "description": "testing fhir profile",
+  "dependencies": {
+    "hl7.fhir.r5.core":"5.0.0"
+  }
+}

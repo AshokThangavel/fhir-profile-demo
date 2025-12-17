@@ -1,5 +1,7 @@
 {
     "objectscript.conn": {
-        "active": false
+        "active": false,
+        "server": "ubuntu_local_zpm",
+        "ns": "FHIRPROFILE"
     }
 }

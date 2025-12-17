@@ -1,0 +1,93 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "FinalPatient",
+	"url": "http://example.org/fhir/StructureDefinition/FinalPatient",
+	"version": "1.0.0",
+	"name": "FinalPatient",
+	"status": "active",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Patient",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+	"derivation": "constraint",
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Profile for patients with mandatory identifier, name, and gender.</div>"
+	},
+	"snapshot": {
+		"element": [
+			{
+				"id": "Patient",
+				"path": "Patient",
+				"min": 0,
+				"max": "*",
+				"short": "Demographics and administrative information for an individual",
+				"definition": "Demographics and other administrative information about an individual or animal receiving care or other health-related services.",
+				"base": {
+					"path": "Patient",
+					"min": 0,
+					"max": "*"
+				}
+			},
+			{
+				"id": "Patient.identifier",
+				"path": "Patient.identifier",
+				"min": 1,
+				"max": "*",
+				"short": "An identifier for this patient",
+				"definition": "An identifier for this patient: a medical record number, resource identifier, international patient identifier, social security number, etc. **(CONSTRAINT: REQUIRED)**",
+				"type": [
+					{
+						"code": "Identifier"
+					}
+				],
+				"base": {
+					"path": "Patient.identifier",
+					"min": 0,
+					"max": "*"
+				}
+			},
+			{
+				"id": "Patient.name",
+				"path": "Patient.name",
+				"min": 1,
+				"max": "*",
+				"short": "A name associated with the patient",
+				"definition": "A name associated with the patient. **(CONSTRAINT: REQUIRED)**",
+				"type": [
+					{
+						"code": "HumanName"
+					}
+				],
+				"base": {
+					"path": "Patient.name",
+					"min": 0,
+					"max": "*"
+				}
+			},
+			{
+				"id": "Patient.gender",
+				"path": "Patient.gender",
+				"min": 1,
+				"max": "1",
+				"short": "male | female | other | unknown **(CONSTRAINT: REQUIRED)**",
+				"definition": "Administrative Gender - the gender that the patient is legally considered to have or that should be used for administrative purposes.",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
+				},
+				"base": {
+					"path": "Patient.gender",
+					"min": 0,
+					"max": "1"
+				}
+			}
+		]
+	}
+}
