@@ -1,15 +1,9 @@
 # FHIR Profile Demo
 
-This repository demonstrates how to create, load, and validate **FHIR Profiles** using **InterSystems IRIS for Health**.
+This repository demonstrates how to create, load, and validate **FHIR Profiles** using **InterSystems IRIS for Health**.  
 It includes a sample FHIR repository and a **Patient FHIR profile**, along with example requests to validate resources against the profile.
 
-<<<<<<< HEAD
 The project is containerized using **Docker Compose** for easy setup and execution.
-=======
-The 'request' includes sample `.http` files that you can run directly in VS Code.
-To execute them, install the **[REST Client](vscode:extension/humao.rest-client)** extension.
-After installing, open any `.http` file and click **"Send Request"** above the request.
->>>>>>> 4e753067a1e63844e328fa2d81600e25cf4731fe
 
 
 ## 📌 Features
